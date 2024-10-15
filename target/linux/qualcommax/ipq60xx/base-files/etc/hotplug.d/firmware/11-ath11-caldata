@@ -18,7 +18,6 @@ case "$FIRMWARE" in
 	cmiot,ax18|\
 	glinet,gl-ax1800|\
 	glinet,gl-axt1800|\
-	linksys,mr7350|\
 	qihoo,v6|\
 	redmi,ax5|\
 	xiaomi,ax1800|\

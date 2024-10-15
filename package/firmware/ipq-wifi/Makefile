@@ -70,7 +70,6 @@ ALLWIFIBOARDS:= \
 	glinet_gl-axt1800 \
 	jdcloud_ax1800-pro \
 	jdcloud_ax6600 \
-	linksys_mr7350 \
 	qihoo_v6 \
 	redmi_ax5 \
 	redmi_ax5-jdcloud \
@@ -208,7 +207,6 @@ $(eval $(call generate-ipq-wifi-package,glinet_gl-ax1800,GL.iNet GL-AX1800))
 $(eval $(call generate-ipq-wifi-package,glinet_gl-axt1800,GL.iNet GL-AXT1800))
 $(eval $(call generate-ipq-wifi-package,jdcloud_ax1800-pro,JDCloud AX1800 Pro))
 $(eval $(call generate-ipq-wifi-package,jdcloud_ax6600,JDCloud AX6600))
-$(eval $(call generate-ipq-wifi-package,linksys_mr7350,Linksys MR7350))
 $(eval $(call generate-ipq-wifi-package,qihoo_v6,Qihoo V6))
 $(eval $(call generate-ipq-wifi-package,redmi_ax5,Redmi AX5))
 $(eval $(call generate-ipq-wifi-package,redmi_ax5-jdcloud,Redmi AX5 JDCloud))

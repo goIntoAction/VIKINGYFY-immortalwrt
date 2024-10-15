@@ -123,21 +123,6 @@ define Device/jdcloud_ax6600
 endef
 TARGET_DEVICES += jdcloud_ax6600
 
-define Device/linksys_mr7350
-	$(call Device/FitImage)
-	DEVICE_VENDOR := Linksys
-	DEVICE_MODEL := MR7350
-	SOC := ipq6000
-	KERNEL_SIZE := 8192k
-	BLOCKSIZE := 128k
-	PAGESIZE := 2048
-	UBINIZE_OPTS := -E 5
-	IMAGES += factory.bin
-	IMAGE/factory.bin := append-kernel | pad-to $$$$(KERNEL_SIZE) | append-ubi | linksys-image type=MR7350
-	DEVICE_PACKAGES := ipq-wifi-linksys_mr7350 kmod-leds-pca963x kmod-usb-ledtrig-usbport
-endef
-TARGET_DEVICES += linksys_mr7350
-
 define Device/qihoo_v6
 	$(call Device/FitImage)
 	$(call Device/UbiFit)
