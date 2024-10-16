@@ -5,7 +5,7 @@ import * as uci from 'uci';
 const bands_order = [ "6G", "5G", "2G" ];
 const htmode_order = [ "EHT", "HE", "VHT", "HT" ];
 
-const txpower_max = '21'
+const txpower_max = '21';
 
 const encryption_method = "psk2";
 const encryption_key = "12345678";
