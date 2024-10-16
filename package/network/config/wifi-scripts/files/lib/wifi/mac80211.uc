@@ -5,6 +5,11 @@ import * as uci from 'uci';
 const bands_order = [ "6G", "5G", "2G" ];
 const htmode_order = [ "EHT", "HE", "VHT", "HT" ];
 
+const txpower_max = '21'
+
+const encryption_method = "psk2";
+const encryption_key = "12345678";
+
 let board = json(readfile("/etc/board.json"));
 if (!board.wlan)
 	exit(0);
@@ -91,14 +96,15 @@ set ${s}.htmode='${htmode}'
 set ${s}.country='${country || ''}'
 set ${s}.num_global_macaddr='${num_global_macaddr || ''}'
 set ${s}.disabled='0'
+set ${s}.txpower='${txpower_max}'
 
 set ${si}=wifi-iface
 set ${si}.device='${name}'
 set ${si}.network='lan'
 set ${si}.mode='ap'
 set ${si}.ssid='${defaults?.ssid || "ImmortalWrt"}'
-set ${si}.encryption='${defaults?.encryption || "none"}'
-set ${si}.key='${defaults?.key || ""}'
+set ${si}.encryption='${encryption_method}'
+set ${si}.key='${encryption_key}'
 
 `);
 	commit = true;
