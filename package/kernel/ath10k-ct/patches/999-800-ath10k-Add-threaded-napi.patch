@@ -4,7 +4,7 @@
  
  	ath10k_dbg(ar, ATH10K_DBG_BOOT, "boot hif start\n");
  
-+    dev_set_threaded(&ar->napi_dev, true);
++	dev_set_threaded(ar->napi_dev, true);
  	ath10k_core_napi_enable(ar);
  
  	ath10k_pci_irq_enable(ar);
@@ -14,7 +14,7 @@
  	struct ath10k_sdio *ar_sdio = ath10k_sdio_priv(ar);
  	int ret;
  
-+    dev_set_threaded(&ar->napi_dev, true);
++	dev_set_threaded(ar->napi_dev, true);
  	ath10k_core_napi_enable(ar);
  
  	/* Sleep 20 ms before HIF interrupts are disabled.
@@ -24,9 +24,9 @@
  	if (!ar->napi_dev)
  		goto err_free_tx_complete;
  
-+    snprintf(ar->napi_dev.name, sizeof(ar->napi_dev.name), "ath10k_%s",
-+        wiphy_name(ar->hw->wiphy));
-+    dev_set_threaded(&ar->napi_dev, true);
++	snprintf(ar->napi_dev->name, sizeof(ar->napi_dev->name), "ath10k_%s",
++		wiphy_name(ar->hw->wiphy));
++	dev_set_threaded(ar->napi_dev, true);
 +
  	ret = ath10k_coredump_create(ar);
  	if (ret)

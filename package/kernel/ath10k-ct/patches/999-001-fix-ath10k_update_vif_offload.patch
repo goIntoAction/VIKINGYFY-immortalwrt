@@ -13,8 +13,8 @@
  		ath10k_warn(ar, "failed to set vdev %i TX encapsulation: %d\n",
  			    arvif->vdev_id, ret);
  	}
-+    
-+    return ret;
++
++	return ret;
  }
  
  /*
