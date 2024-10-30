@@ -338,8 +338,7 @@ define Device/prpl_haze
 	DEVICE_MODEL := Haze
 	DEVICE_DTS_CONFIG := config@hk09
 	SOC := ipq8072
-	DEVICE_PACKAGES := ath11k-firmware-qcn9074 ipq-wifi-prpl_haze kmod-ath11k-pci \
-		mkf2fs f2fsck kmod-fs-f2fs kmod-leds-lp5562
+	DEVICE_PACKAGES := ath11k-firmware-qcn9074 ipq-wifi-prpl_haze kmod-ath11k-pci kmod-leds-lp5562
 endef
 TARGET_DEVICES += prpl_haze
 
@@ -359,7 +358,7 @@ define Device/redmi_ax6
 	$(call Device/xiaomi_ax3600)
 	DEVICE_VENDOR := Redmi
 	DEVICE_MODEL := AX6
-	DEVICE_PACKAGES := ipq-wifi-redmi_ax6 -kmod-usb3 -kmod-usb-dwc3 -kmod-usb-dwc3-qcom -automount
+	DEVICE_PACKAGES := ipq-wifi-redmi_ax6
 endef
 TARGET_DEVICES += redmi_ax6
 
@@ -382,7 +381,7 @@ define Device/spectrum_sax1v1k
 	DEVICE_DTS_CONFIG := config@rt5010w-d187-rev6
 	SOC := ipq8072
 	IMAGES := sysupgrade.bin
-	DEVICE_PACKAGES := kmod-fs-f2fs f2fs-tools ipq-wifi-spectrum_sax1v1k
+	DEVICE_PACKAGES := ipq-wifi-spectrum_sax1v1k
 endef
 TARGET_DEVICES += spectrum_sax1v1k
 
