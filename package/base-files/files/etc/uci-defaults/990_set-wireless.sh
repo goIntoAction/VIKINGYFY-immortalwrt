@@ -95,7 +95,11 @@ set_wifi_def_cfg() {
         fi
         ;;
     *)
-        htmode="HE20"
+        case "$htmode" in
+        'HT40' | 'VHT40' | 'HE40')
+            htmode="${htmode%40}20"
+            ;;
+        esac
         ;;
     esac
 
